@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de notas</title>
+    <link rel="stylesheet" type="text/css" href="index.css"> <!-- Vincule o arquivo CSS aqui -->
+    <link rel="stylesheet" type="text/css" href="./menu.css">
+</head>
+
+<!-- Menu responsivo -->
+<div class="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<nav class="menu" id="menu">
+    <ul>
+        <li><a href="./index.html" id="menuul">Home</a></li>
+        <li><a href="#" id="menuul">Médio</a>
+            <ul class="submenu">
+                <li><a href="./em_trimestral.html">Média Trimestral</a></li>
+                <li><a href="./media-anual.html">Média Anual</a></li>
+                <li><a href="./media-final.html">Média Final</a></li>
+                <li><a href="./em_at-3tri.html">AT 3º tri</a></li>
+                <li><a href="./em_media-3tri.html">Média 3º tri</a></li>
+                <li><a href="./exame-final.htlm">Exame Final</a></li>
+            </ul>
+        </li>
+        <li><a href="#" id="menuul">9º Ano</a>
+            <ul class="submenu">
+                <li><a href="./9_trimestral">Média Trimestral</a></li>
+                <li><a href="./media-anual.html">Média Anual</a></li>
+                <li><a href="./media-final.html">Média Final</a></li>
+                <li><a href="./9_at-3tri">AT 3º tri</a></li>
+                <li><a href="./9_media-3tri">Média 3º tri</a></li>
+                <li><a href="./exame-final.htlm">Exame Final</a></li>
+            </ul>
+        </li>
+        <li><a href="#" id="menuul">Fund 2</a>
+            <ul class="submenu">
+                <li><a href="./f2_trimestral.html">Média Trimestral</a></li>
+                <li><a href="./media-anual.html">Média Anual</a></li>
+                <li><a href="./media-final.html">Média Final</a></li>
+                <li><a href="./f2_at-3tri.html">AT 3º tri</a></li>
+                <li><a href="./f2_media-3tri.html">Média 3º tri</a></li>
+                <li><a href="./exame-final.htlm">Exame Final</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+<br>
+
+<body>
+
+<br>
+
+    <!-- Ensino Médio (EM) -->
+    <h2>Ensino Médio</h2>
+    <div class="botoes">
+        <a href="em_trimestral.html" class="botao">Média Trimestral</a>
+        <a href="em_anual.html" class="botao">Média Anual</a>
+        <a href="em_at-3tri.html" class="botao">AT 3º Trimestre</a>
+        <a href="em_media-3tri.html" class="botao">Média 3º Trimestre</a>
+        <a href="em_exame-final.html" class="botao">Exame Final</a>
+    </div>
+
+<br>
+
+    <!-- Ensino Fundamental 2 (F2) -->
+    <h2>Ensino Fundamental 2</h2>
+    <div class="botoes">
+        <a href="f2_trimestral.html" class="botao">Média Trimestral</a>
+        <a href="f2_anual.html" class="botao">Média Anual</a>
+        <a href="f2_at-3tri.html" class="botao">AT 3º Trimestre</a>
+        <a href="f2_media-3tri.html" class="botao">Média 3º Trimestre</a>
+        <a href="f2_exame-final.html" class="botao">Exame Final</a>
+    </div>
+
+<br>
+
+<script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.menu');
+
+    menuToggle.addEventListener('click', () => {
+        menu.classList.toggle('open');
+    });
+
+    const submenuToggles = document.querySelectorAll('.menu li.has-submenu');
+
+    submenuToggles.forEach((toggle) => {
+        toggle.addEventListener('click', () => {
+            toggle.classList.toggle('open');
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AT 3º tri</title>
+    <link rel="stylesheet" type="text/css" href="notas.css">
+    <link rel="stylesheet" type="text/css" href="menu.css">
+
+</head>
+
+<nav class="menu">
+    <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="#">Médio</a>
+            <ul class="submenu">
+                <li><a href="./em_trimestral.html">Média Trimestral</a></li>
+                <li><a href="./media-anual.html">Média Anual</a></li>
+                <li><a href="./media-final.html">Média Final</a></li>
+                <li><a href="./em_at-3tri.html">AT 3º tri</a></li>
+                <li><a href="./em_media-3tri.html">Média 3º tri</a></li>
+                <li><a href="./exame-final.htlm">Exame Final</a></li>
+            </ul>
+        </li>
+        <li><a href="#">9º Ano</a>
+            <ul class="submenu">
+                <li><a href="./9_trimestral">Média Trimestral</a></li>
+                <li><a href="./media-anual.html">Média Anual</a></li>
+                <li><a href="./media-final.html">Média Final</a></li>
+                <li><a href="./9_at-3tri">AT 3º tri</a></li>
+                <li><a href="./9_media-3tri">Média 3º tri</a></li>
+                <li><a href="./exame-final.htlm">Exame Final</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Fund 2</a>
+            <ul class="submenu">
+                <li><a href="./f2_trimestral.html">Média Trimestral</a></li>
+                <li><a href="./media-anual.html">Média Anual</a></li>
+                <li><a href="./media-final.html">Média Final</a></li>
+                <li><a href="./f2_at-3tri.html">AT 3º tri</a></li>
+                <li><a href="./f2_media-3tri.html">Média 3º tri</a></li>
+                <li><a href="./exame-final.htlm">Exame Final</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+<br>
+
+<body>
+    <h1>Calculadora AT Necesária 3º Trimestre: </h1>
+    <form id="calculator-form">
+        <label for="tri1">1º Trimestre:</label>
+        <input type="number" id="tri1" step="0.01" required><br><br>
+
+        <label for="tri2">2º Trimestre:</label>
+        <input type="number" id="tri2" step="0.01" required><br><br>
+
+        <label for="ac">AC 3º Trimestre:</label>
+        <input type="number" id="ac" step="0.01" required><br><br>
+
+        <label for="agh">AGH 3º Trimestre:</label>
+        <input type="number" id="agh" step="0.01" required><br><br>
+
+        <button type="button" onclick="calcularAT()">Calcular</button><br><br>
+
+        <p>Nota AT necessária: <span id="resultado"></span></p>
+    </form>
+
+    <script>
+        function calcularAT() {
+            const tri1 = parseFloat(document.getElementById('tri1').value);
+            const tri2 = parseFloat(document.getElementById('tri2').value);
+            const ac = parseFloat(document.getElementById('ac').value);
+            const agh = parseFloat(document.getElementById('agh').value);
+
+            if (!isNaN(tri1) && !isNaN(tri2) && !isNaN(ac) && !isNaN(agh)) {
+                const AT = (((36-(tri1+tri2*2))/3*10)-((ac*3)+(agh*2)))/5;
+                document.getElementById('resultado').textContent = AT.toFixed(1);
+
+            } else {
+                alert('Por favor, preencha todas as notas corretamente.');
+            }
+        }
+    </script>
+
+</body>
+</html>
