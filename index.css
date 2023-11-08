@@ -6,21 +6,17 @@ body {
     margin: 0;
     padding: 0;
     margin-top: 50px;
+    column-count: 3;
+
 }
 
 h2 {
     color: #605c5b;
-}
-
-.botoes {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
+    text-align: center;
 }
 
 .botao {
-    display: inline-block;
+    display: block;
     padding: 10px 20px;
     margin: 10px;
     font-size: 16px;
@@ -28,7 +24,7 @@ h2 {
     color: white;
     text-decoration: none;
     border-radius: 4px;
-    transition: background-color 0.3s ease;
+    transition: 0.3s ease; /* Tempo de transição do botão com sombra */
 }
 
 .botao:hover {

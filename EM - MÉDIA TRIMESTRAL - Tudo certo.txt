@@ -1,0 +1,19 @@
+EM - MÉDIA TRIMESTRAL - Tudo certo
+
+F2 - MÉDIA TRIMESTRAL - Mudar ordem em q aparece AC - AT, tem q ser AT - AC
+
+MÉDIA ANUAL - Arrumar os décimos de diferença para arredondamento
+
+MÉDIA EXAME / MEDIA FINAL- virou média anual, precisa fazer um do exame pra descobrir quanto tirar no exame
+
+EXAME
+
+MÉDIA FINAL - pronto (serve para todas as turmas)
+
+quando tiver ativado o menu para tela pequenas e o usuario clicar fora do menu ele fechar
+
+readicionar a sombra 
+
+
+RELATÓRIO BIOLOGIA: Identificar as coisas na imagem, olhar arquivo em apostilas para melhor estruturar o procedimento. Colocar uma fotinho do grupo no relatório
+nome da bolinha do olho: cristalino
